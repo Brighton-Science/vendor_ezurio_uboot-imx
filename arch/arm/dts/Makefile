@@ -962,6 +962,7 @@ dtb-$(CONFIG_ARCH_IMX8M) += \
 	imx8mn-nitrogen8mn_som.dtb \
 
 dtb-$(CONFIG_ARCH_IMX8M) += \
+	imx8mp-abiomed.dtb \
 	imx8mp-crs.dtb \
 	imx8mp-nitrogen_smarc.dtb \
 	imx8mp-nitrogen8mp.dtb \

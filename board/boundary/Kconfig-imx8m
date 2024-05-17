@@ -2,6 +2,12 @@ choice
 	prompt	"Boundary i.MX8M board select"
 	optional
 
+config TARGET_IMX8MP_ABIOMED
+	bool "imx8mp abiomed board"
+	select BINMAN
+	select IMX8MP
+	select SUPPORT_SPL
+
 config TARGET_ASH8MM
 	bool "ash8mm"
 	select BINMAN
@@ -178,6 +184,7 @@ config TARGET_SPAN
 
 endchoice
 
+source "board/boundary/imx8mp_abiomed/Kconfig"
 source "board/boundary/ash8mm/Kconfig"
 source "board/boundary/bio/Kconfig"
 source "board/boundary/c2-imx8mm/Kconfig"
