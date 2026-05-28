@@ -199,3 +199,7 @@ CONFIG_VIDEO_BMP_GZIP=y
 CONFIG_IMX_WATCHDOG=y
 CONFIG_LIBAVB=y
 CONFIG_OF_LIBFDT_OVERLAY=y
+
+# Enable 'oem ucmd' fastboot extension so UUU can drive u-boot during First
+# Flash (FB: ucmd <u-boot command>). Required by the first-flash recipe.
+CONFIG_FASTBOOT_UUU_SUPPORT=y
