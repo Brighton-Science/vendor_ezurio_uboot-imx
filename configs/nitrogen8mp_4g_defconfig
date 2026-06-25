@@ -202,3 +202,10 @@ CONFIG_OF_LIBFDT_OVERLAY=y
 # Enable 'oem ucmd' fastboot extension so UUU can drive u-boot during First
 # Flash (FB: ucmd <u-boot command>). Required by the first-flash recipe.
 CONFIG_FASTBOOT_UUU_SUPPORT=y
+
+# BS-256: raise the LMB region cap (default 8 is too few once the M7 reserved-memory
+# regions + GPU-pool no-map hole are added to the FDT) to avoid LMB reserve overflow
+# during boot. Ported from Kynetics 12.1 uboot commit 8d1f39a4. This is the defconfig
+# the elliot_8mp build actually uses (device/brighton/elliot_8mp/UbootKernelBoardConfig.mk).
+CONFIG_LMB_USE_MAX_REGIONS=y
+CONFIG_LMB_MAX_REGIONS=16
